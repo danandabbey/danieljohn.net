@@ -1,6 +1,9 @@
+
+const mobile = window.innerWidth <= 900
+
 const style = {
     'app': {
-        'backgroundImage' : 'url(./portrait.jpg)',
+        'backgroundImage' : `url(${mobile? './portraitMobile.jpg' : './portrait.jpg'})`,
         'backgroundRepeat': 'no-repeat',
         'backgroundSize': 'cover',
         'backgroundAttachment': 'fixed',
