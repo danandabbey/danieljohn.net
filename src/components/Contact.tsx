@@ -13,7 +13,7 @@ const Contact = () => {
             <div id={'contactCard'} style={style.contactCard}>
                 <a style={style.link} href="https://otium.dev">
                     <h5 style={style.cardTitle}>
-                        Otium.dev
+                        Otium Labs
                     </h5>
                 </a>
             </div>
