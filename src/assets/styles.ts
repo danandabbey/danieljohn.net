@@ -5,6 +5,7 @@ bodyStyle.overflowX = "hidden";
 bodyStyle.overflowY = "hidden";
 
 const mobile: boolean = window.innerWidth <= 900;
+const height = mobile ? "3em" : "5em";
 
 const style: any = {
   app: {
@@ -45,7 +46,16 @@ const style: any = {
     flexDirection: "row",
     gap: mobile ? "1em" : "5em",
     width: "100%",
-    padding: "1em",
+    padding: mobile ? "" : "1em",
+  },
+  contactCard: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: height,
+  },
+  link: {
+    textDecoration: "none",
   },
 };
 
