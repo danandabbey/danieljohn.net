@@ -1,31 +1,35 @@
-import style from '../assets/styles'
+import style from "../assets/styles";
+import ContactCard from "./ContactCard";
 
 const Contact = () => {
-    return (
-        <div id={'contactSection'} style={style.contactSection}>
-            <div style={style.contactCard}>
-                <a style={style.link} href="http://github.com/danandabbey">
-                    <h5 style={style.cardTitle}>
-                        GitHub
-                    </h5>
-                </a>
-            </div>
-            <div id={'contactCard'} style={style.contactCard}>
-                <a style={style.link} href="https://otium.dev">
-                    <h5 style={style.cardTitle}>
-                        Otium Labs
-                    </h5>
-                </a>
-            </div>
-            <div id={'contactCard'} style={style.contactCard}>
-                    <a style={style.link} href="mailto:contact@danieljohn.net?subject=contact" target="_blank">
-                    <h5 style={style.cardTitle}>
-                        Email
-                    </h5>
-                </a>
-            </div>
-        </div>
-    )
+  const cards = [
+    {
+      name: "Github",
+      destination: "http://github.com/danandabbey",
+    },
+    {
+      name: "Otium Labs",
+      destination: "https://otium.dev",
+    },
+    {
+      name: "Email",
+      destination: "mailto:contact@danieljohn.net?subject=contact",
+    },
+  ];
+
+  return (
+    <div id={"contactSection"} style={style.contactSection}>
+      {cards.map((card) => {
+        return (
+          <ContactCard
+            key={card.name}
+            title={card.name}
+            destination={card.destination}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
-export default Contact
+export default Contact;
