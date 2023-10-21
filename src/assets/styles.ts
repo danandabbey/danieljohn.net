@@ -24,12 +24,14 @@ const style: any = {
         'display': 'flex',
         'flexDirection':'column',
         'height': '75%',
+        'justifyContent': mobile ? 'center' : 'left',
         'textAlign' : mobile? 'center' : 'left'
     },
     'name': {
         'color' : '#fff',
         'position': 'fixed',
         'top': '0',
+        'width':'100%',
         'padding' : mobile? '.1em' : '.5em',
         'fontSize': mobile ? '50px' : '100px',
         'marginBlockStart': '0em',
@@ -38,7 +40,8 @@ const style: any = {
     'contactSection': {
         'position': 'fixed',
         'bottom': '0',
-        'display':'flex',
+        'display': 'flex',
+        'justifyContent': mobile ? 'center' : '',
         'flexDirection': 'row',
         'gap':mobile? '1em' : '5em',
         'width': '100%',
@@ -52,7 +55,7 @@ const style: any = {
     },
     'cardTitle': {
         'color': '#fff',
-        'fontSize': mobile ? '25px' : '50px',
+        'fontSize': mobile ? '30px' : '50px',
     },
     'link': {
         'color': '#fff',
