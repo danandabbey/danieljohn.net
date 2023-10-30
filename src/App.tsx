@@ -2,7 +2,6 @@ import { useEffect, createContext, useState } from "react";
 import getStyle from "./assets/styles";
 import Contact from "./components/ContactSection";
 import Info from "./components/Info";
-import Loading from "./components/Loading";
 
 export const styleContext = createContext({});
 export const mobileContext = createContext({});
