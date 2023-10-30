@@ -60,19 +60,6 @@ const setStyles = () => {
       textDecoration: "none",
       cursor: "",
     },
-    /************************************* Loading *************************************/
-    loading: {
-      justifyContent: "center",
-      textAlign: "center",
-      width: "100%",
-      height: "100%",
-    },
-    loadingDot: {
-      color: colors.main,
-      justifyContent: "center",
-      textAlign: "center",
-      fontSize: mobile ? "4em" : "5em",
-    },
   };
 };
 
