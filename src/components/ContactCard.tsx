@@ -1,40 +1,43 @@
-import { useState } from "react";
-import style from "../assets/styles";
+import { useContext, useState } from "react";
+import { styleContext } from "../App";
 
 const ContactCard = (props: any) => {
-  const { destination, title } = props;
+  const style: any = useContext(styleContext);
+  const { destination, text } = props;
   const mobile: boolean = window.innerWidth <= 900;
 
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  const titleStyle = {
-    color: "#fff",
-    fontSize: mobile ? "30px" : "50px",
+  const textStyle = {
+    color: style.contact.color,
+    fontSize: "30px",
   };
 
-  isHovered ? (titleStyle.color = "#000") : (titleStyle.color = "#fff");
+  isHovered
+    ? (textStyle.color = style.accentColor)
+    : (textStyle.color = style.contact.color);
 
   if (mobile) {
     return (
-      <div id={"contactCard"} style={style.contactCard}>
+      <div style={style.contact}>
         <a style={style.link} href={destination} target="_blank">
-          <h5 style={titleStyle}>{title}</h5>
+          <p style={textStyle}>{text}</p>
         </a>
       </div>
     );
   } else {
     return (
-      <div id={"contactCard"} style={style.contactCard}>
+      <div style={style.contact}>
         <a style={style.link} href={destination} target="_blank">
-          <h5
-            style={titleStyle}
+          <p
+            style={textStyle}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            {title}
-          </h5>
+            {text}{" "}
+          </p>
         </a>
       </div>
     );

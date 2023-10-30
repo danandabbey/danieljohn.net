@@ -2,61 +2,78 @@ const bodyStyle = document.body.style;
 bodyStyle.border = "0px";
 bodyStyle.margin = "0px";
 bodyStyle.overflowX = "hidden";
-bodyStyle.overflowY = "hidden";
 
-const mobile: boolean = window.innerWidth <= 900;
-const height = mobile ? "3em" : "5em";
-
-const style: any = {
-  app: {
-    backgroundImage: `url(${
-      mobile ? "./portraitMobile.jpg" : "./portrait.jpg"
-    })`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    backgroundPosition: "center",
-    display: "flex",
-    flexDirection: "column",
-    width: "100vw",
-    height: "100vh",
-  },
-  nameCon: {
-    display: "flex",
-    flexDirection: "column",
-    height: "75%",
-    justifyContent: mobile ? "center" : "left",
-    textAlign: mobile ? "center" : "left",
-  },
-  name: {
-    color: "#fff",
-    position: "fixed",
-    top: "0",
-    width: "100%",
-    padding: mobile ? ".1em" : ".5em",
-    fontSize: mobile ? "50px" : "100px",
-    marginBlockStart: "0em",
-    marginBlockEnd: "0em",
-  },
-  contactSection: {
-    position: "fixed",
-    bottom: "0",
-    display: "flex",
-    justifyContent: mobile ? "center" : "",
-    flexDirection: "row",
-    gap: mobile ? "1em" : "5em",
-    width: "100%",
-    padding: mobile ? "" : "1em",
-  },
-  contactCard: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    height: height,
-  },
-  link: {
-    textDecoration: "none",
-  },
+const colors = {
+  main: "#f2efe9",
+  accent: "#bfb48f",
+  background: "#252627",
+};
+const mobile = window.innerWidth <= 900;
+const setStyles = () => {
+  return {
+    accentColor: colors.accent,
+    app: {
+      backgroundColor: colors.background,
+      display: "flex",
+      flexDirection: "column",
+      width: "100vw",
+      height: "100vh",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    main: {
+      display: "flex",
+      flexDirection: "column",
+      width: mobile ? "100vw" : "75vh",
+      height: mobile ? "100vh" : "50vh",
+    },
+    introCon: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      textAlign: "center",
+    },
+    intro: {
+      display: "flex",
+      color: colors.main,
+      padding: ".5em",
+      fontSize: "30px",
+      textAlign: mobile ? "center" : "left",
+      marginBlockStart: "0em",
+      marginBlockEnd: "0em",
+    },
+    contactCon: {
+      display: "flex",
+      gap: "1em",
+      justifyContent: "center",
+      flexDirection: mobile ? "column" : "row",
+      alignItems: "center",
+    },
+    contact: {
+      color: colors.main,
+      display: "flex",
+      flexWrap: "wrap",
+      margin: "1em",
+      alignItems: mobile ? "center" : "left",
+    },
+    link: {
+      textDecoration: "none",
+      cursor: "",
+    },
+    /************************************* Loading *************************************/
+    loading: {
+      justifyContent: "center",
+      textAlign: "center",
+      width: "100%",
+      height: "100%",
+    },
+    loadingDot: {
+      color: colors.main,
+      justifyContent: "center",
+      textAlign: "center",
+      fontSize: mobile ? "4em" : "5em",
+    },
+  };
 };
 
-export default style;
+export default setStyles;

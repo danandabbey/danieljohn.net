@@ -1,7 +1,10 @@
-import style from "../assets/styles";
+import { useContext } from "react";
 import ContactCard from "./ContactCard";
+import { styleContext } from "../App";
 
 const Contact = () => {
+  const style: any = useContext(styleContext);
+
   const cards = [
     {
       name: "Github",
@@ -18,12 +21,12 @@ const Contact = () => {
   ];
 
   return (
-    <div id={"contactSection"} style={style.contactSection}>
+    <div id={"contactCon"} style={style.contactCon}>
       {cards.map((card) => {
         return (
           <ContactCard
             key={card.name}
-            title={card.name}
+            text={card.name}
             destination={card.destination}
           />
         );
