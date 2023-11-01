@@ -25,7 +25,6 @@ const setStyles = () => {
       display: "flex",
       flexDirection: "column",
       width: mobile ? "100vw" : "75vh",
-      height: mobile ? "100vh" : "50vh",
     },
     introCon: {
       display: "flex",

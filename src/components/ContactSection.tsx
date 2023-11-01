@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import ContactCard from "./ContactCard";
 import { styleContext } from "../App";
+import ContactCard from "./ContactCard";
 
 const Contact = () => {
   const style: any = useContext(styleContext);
@@ -9,10 +9,6 @@ const Contact = () => {
     {
       name: "Github",
       destination: "http://github.com/danandabbey",
-    },
-    {
-      name: "Otium Labs",
-      destination: "https://otium.dev",
     },
     {
       name: "Email",
