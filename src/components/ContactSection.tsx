@@ -11,6 +11,10 @@ const Contact = () => {
       destination: "http://github.com/danandabbey",
     },
     {
+      name: "Otium Labs",
+      destination: "https://otium.dev",
+    },
+    {
       name: "Email",
       destination: "mailto:contact@danieljohn.net?subject=contact",
     },
