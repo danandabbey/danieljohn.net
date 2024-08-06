@@ -9,9 +9,11 @@ const colors = {
   background: "#252627",
 };
 const mobile = window.innerWidth <= 900;
-const setStyles = () => {
-  return {
-    accentColor: colors.accent,
+
+const styles: any = {
+    color:{
+      accentColor: colors.accent
+    },
     app: {
       backgroundColor: colors.background,
       display: "flex",
@@ -59,7 +61,6 @@ const setStyles = () => {
       textDecoration: "none",
       cursor: "",
     },
-  };
 };
 
-export default setStyles;
+export default styles;

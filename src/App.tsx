@@ -1,5 +1,5 @@
-import { useEffect, createContext, useState } from "react";
-import getStyle from "./assets/styles";
+import { createContext, useState } from "react";
+import style from "./assets/styles";
 import Contact from "./components/ContactSection";
 import Info from "./components/Info";
 
@@ -7,11 +7,6 @@ export const styleContext = createContext({});
 export const mobileContext = createContext({});
 
 const App = () => {
-  const [style, setStyles]: any = useState(getStyle());
-
-  useEffect(() => {
-    setStyles(getStyle());
-  }, []);
 
   return (
     <styleContext.Provider value={style}>

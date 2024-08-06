@@ -16,7 +16,7 @@ const ContactCard = (props: any) => {
   };
 
   isHovered
-    ? (textStyle.color = style.accentColor)
+    ? (textStyle.color = style.color.accentColor)
     : (textStyle.color = style.contact.color);
 
   if (mobile) {
